@@ -37,32 +37,6 @@
 <?php
 	include_once(DIRNAME(__FILE__) . './load/footer.php');
 ?>
-<script>
-	$(document).foundation();
-	$(document).ready(function(){
-		//global variables
-		$.namespace = {};
 
-		var request = new XMLHttpRequest();
-
-		request.open('GET', 'http://api.themoviedb.org/3/tv/57243?api_key=ed6fd3584f5c59d457156c98b4b922f7');
-
-		request.setRequestHeader('Accept', 'application/json');
-
-		request.onreadystatechange = function () {
-		  if (this.readyState === 4) {
-		    console.log('Status:', this.status);
-		    console.log('Headers:', this.getAllResponseHeaders());
-		    //console.log(this.response);
-		    $.namespace.stuff = $.parseJSON(this.responseText);
-		    console.log($.parseJSON(this.responseText));
-		    //$('.data-dump').html(this.responseText);
-		  }
-		};
-
-		request.send();
-
-	});
-</script>
 </body>
 </html>
