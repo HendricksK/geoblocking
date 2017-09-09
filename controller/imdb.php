@@ -2,7 +2,7 @@
 
 class imdb {
 
-	protected $opendb_key = 'ed6fd3584f5c59d457156c98b4b922f7';
+	protected $opendb_key = '';
 	protected $config = null;
 	
 	function __construct() {
